@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "device_types",
+  "info": {
+    "singularName": "device-type",
+    "pluralName": "device-types",
+    "displayName": "Device",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "LargeScreen",
+        "Tablet"
+      ]
+    },
+    "overlayText": {
+      "displayName": "Overlay Text",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.overlay-text"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pin": {
+      "type": "integer"
+    }
+  }
+}

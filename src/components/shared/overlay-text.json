@@ -1,15 +1,15 @@
 {
-  "collectionName": "components_shared_quotes",
+  "collectionName": "components_shared_overlay_texts",
   "info": {
-    "displayName": "Quote",
-    "icon": "indent"
+    "displayName": "Overlay Text",
+    "icon": "book"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "body": {
+    "content": {
       "type": "text"
     }
   }
