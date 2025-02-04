@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * device-type service
+ * device service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::device-type.device-type');
+module.exports = createCoreService('api::device.device');

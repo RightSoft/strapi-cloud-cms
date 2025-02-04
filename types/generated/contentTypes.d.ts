@@ -369,32 +369,34 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiDeviceTypeDeviceType extends Struct.SingleTypeSchema {
-  collectionName: 'device_types';
+export interface ApiDeviceDevice extends Struct.CollectionTypeSchema {
+  collectionName: 'devices';
   info: {
     description: '';
     displayName: 'Device';
-    pluralName: 'device-types';
-    singularName: 'device-type';
+    pluralName: 'devices';
+    singularName: 'device';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    backgroundMedia: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::device-type.device-type'
+      'api::device.device'
     > &
       Schema.Attribute.Private;
-    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Schema.Attribute.String;
-    order: Schema.Attribute.Integer;
-    overlayText: Schema.Attribute.Component<'shared.overlay-text', false>;
-    pin: Schema.Attribute.Integer;
+    overlay: Schema.Attribute.Component<'shared.overlay-text', true>;
+    pin: Schema.Attribute.Integer & Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
     type: Schema.Attribute.Enumeration<['LargeScreen', 'Tablet']>;
     updatedAt: Schema.Attribute.DateTime;
@@ -912,7 +914,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::device-type.device-type': ApiDeviceTypeDeviceType;
+      'api::device.device': ApiDeviceDevice;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

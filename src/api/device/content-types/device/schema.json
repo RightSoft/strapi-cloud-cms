@@ -1,9 +1,9 @@
 {
-  "kind": "singleType",
-  "collectionName": "device_types",
+  "kind": "collectionType",
+  "collectionName": "devices",
   "info": {
-    "singularName": "device-type",
-    "pluralName": "device-types",
+    "singularName": "device",
+    "pluralName": "devices",
     "displayName": "Device",
     "description": ""
   },
@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "order": {
-      "type": "integer"
-    },
     "name": {
       "type": "string"
     },
@@ -25,15 +22,14 @@
         "Tablet"
       ]
     },
-    "overlayText": {
-      "displayName": "Overlay Text",
+    "overlay": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "shared.overlay-text"
     },
-    "media": {
+    "backgroundMedia": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
@@ -43,7 +39,8 @@
       ]
     },
     "pin": {
-      "type": "integer"
+      "type": "integer",
+      "unique": true
     }
   }
 }

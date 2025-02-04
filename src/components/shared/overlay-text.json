@@ -1,8 +1,9 @@
 {
   "collectionName": "components_shared_overlay_texts",
   "info": {
-    "displayName": "Overlay Text",
-    "icon": "book"
+    "displayName": "Overlay",
+    "icon": "book",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,6 +12,29 @@
     },
     "content": {
       "type": "text"
+    },
+    "backgroundMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "locationX": {
+      "type": "decimal"
+    },
+    "locationY": {
+      "type": "decimal"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
     }
   }
 }
