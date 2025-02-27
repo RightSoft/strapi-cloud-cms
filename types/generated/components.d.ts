@@ -23,7 +23,15 @@ export interface SharedOverlayText extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     content: Schema.Attribute.Text;
-    height: Schema.Attribute.Integer;
+    height: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<300>;
     locationX: Schema.Attribute.Decimal &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
@@ -43,7 +51,14 @@ export interface SharedOverlayText extends Struct.ComponentSchema {
       > &
       Schema.Attribute.DefaultTo<0>;
     title: Schema.Attribute.String;
-    width: Schema.Attribute.Integer;
+    width: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 450;
+        },
+        number
+      >;
   };
 }
 
