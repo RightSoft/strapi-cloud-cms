@@ -25,10 +25,16 @@
       ]
     },
     "locationX": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0,
+      "required": true,
+      "min": 0
     },
     "locationY": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0,
+      "required": true,
+      "min": 0
     },
     "width": {
       "type": "integer"

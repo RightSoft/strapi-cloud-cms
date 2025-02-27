@@ -24,8 +24,24 @@ export interface SharedOverlayText extends Struct.ComponentSchema {
     >;
     content: Schema.Attribute.Text;
     height: Schema.Attribute.Integer;
-    locationX: Schema.Attribute.Decimal;
-    locationY: Schema.Attribute.Decimal;
+    locationX: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
+    locationY: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
     title: Schema.Attribute.String;
     width: Schema.Attribute.Integer;
   };
