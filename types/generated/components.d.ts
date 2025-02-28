@@ -21,7 +21,8 @@ export interface SharedOverlayText extends Struct.ComponentSchema {
   attributes: {
     backgroundMedia: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
+    > &
+      Schema.Attribute.Required;
     content: Schema.Attribute.Text;
     height: Schema.Attribute.Integer &
       Schema.Attribute.Required &
