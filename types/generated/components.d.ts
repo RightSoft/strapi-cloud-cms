@@ -55,7 +55,7 @@ export interface SharedOverlayText extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
         {
-          min: 450;
+          min: 0;
         },
         number
       >;
