@@ -39,7 +39,8 @@
     "width": {
       "type": "integer",
       "required": true,
-      "min": 0
+      "min": 0,
+      "default": 450
     },
     "height": {
       "type": "integer",

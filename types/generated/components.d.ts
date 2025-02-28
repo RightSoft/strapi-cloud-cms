@@ -58,7 +58,8 @@ export interface SharedOverlayText extends Struct.ComponentSchema {
           min: 0;
         },
         number
-      >;
+      > &
+      Schema.Attribute.DefaultTo<450>;
   };
 }
 
