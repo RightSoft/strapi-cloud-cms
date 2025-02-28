@@ -6,7 +6,7 @@ module.exports = () => ({
               maxage: 300000
             },
           },
-          sizeLimit: 750 * 1024 * 1024, // 256mb in bytes
+          sizeLimit: 2500 * 1024 * 1024, // 256mb in bytes
           breakpoints: {
             xlarge: 1920,
             large: 1000,

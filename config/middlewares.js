@@ -8,11 +8,11 @@ module.exports = [
   {
     name: "strapi::body",
     config: {
-      formLimit: "750mb", // Increase form size
-      jsonLimit: "750mb", // Increase JSON payload size
-      textLimit: "750mb", // Increase text size
+      formLimit: "2500mb", // Increase form size
+      jsonLimit: "2500mb", // Increase JSON payload size
+      textLimit: "2500mb", // Increase text size
       formidable: {
-        maxFileSize: 750 * 1024 * 1024, // Set max upload size to 500MB
+        maxFileSize: 2500 * 1024 * 1024, // Set max upload size to 500MB
       },
     },
   },
